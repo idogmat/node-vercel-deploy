@@ -2,11 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
 
-const corsOptions = {
-    origin: process.env.CLIENT_URL,
-    credentials: true
-};
-
 let db = [
     {id: 1, title: 'frontend'},
     {id: 2, title: 'backend'},
