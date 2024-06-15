@@ -1,3 +1,5 @@
+node_modules
 .idea
-/node_modules
-.vercel
+dist
+yarn-error.log
+.env

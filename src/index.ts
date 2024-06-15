@@ -1,18 +1,23 @@
-// https://dev.to/tirthpatel/deploy-node-ts-express-typescript-on-vercel-284h
-
 import express, { Request, Response } from 'express'
 
+
 const app = express()
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 5000
 
-app.get('/', (_req: Request, res: Response) => {
-	return res.send('Express Typescript on Vercel')
+const parserMiddleware = express.json()
+app.use(parserMiddleware)
+
+
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello Samurai')
 })
 
-app.get('/ping', (_req: Request, res: Response) => {
-	return res.send('pong 🏓')
-})
 
-app.listen(port, () => {
-	return console.log(`Server is listening on ${port}`)
-})
+
+const startApp = async () => {
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
+}
+
+startApp()

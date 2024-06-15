@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "scripts": {
     "watch": "tsc -w",
-    "dev": "nodemon --inspect api/index.js",
+    "dev": "nodemon --inspect dist/index.js",
     "build": "tsc",
-    "start": "node api/index.js"
+    "start": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
