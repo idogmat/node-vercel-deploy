@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && node dist/index.js",
+    "build": "tsc",
     "watch": "tsc -W",
     "dev": "nodemon dist/index.js",
-    "debug": "nodemon --inspect dist/index.js"
+    "debug": "nodemon --inspect dist/index.js",
+    "vercel-build": "node dist/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
