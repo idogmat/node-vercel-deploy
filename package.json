@@ -4,8 +4,10 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
     "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "watch": "tsc -W",
     "dev": "nodemon dist/index.js",
     "debug": "nodemon --inspect dist/index.js",
