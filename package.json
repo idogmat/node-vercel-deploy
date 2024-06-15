@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "nodemon src/index.ts",
     "watch": "tsc -W",
     "dev": "nodemon dist/index.js",
     "debug": "nodemon --inspect dist/index.js",
