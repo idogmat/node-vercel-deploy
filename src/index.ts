@@ -1,5 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
 
 const corsOptions = {
@@ -15,8 +16,8 @@ let db = [
 ];
 const port = process.env.PORT;
 const app = express();
+app.use(cors(corsOptions))
 app.use(express.json())
-
 
 app.get('/', (req , res) => {
     res.send({message: 'Hello samurais!'})
